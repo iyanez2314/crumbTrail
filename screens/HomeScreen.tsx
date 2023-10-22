@@ -1,4 +1,10 @@
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import {
   HomeHeading,
@@ -25,6 +31,10 @@ export default function HomeScreen() {
   const handleHome = () => {};
   const handleDiscover = () => {};
 
+  const handleOtherListPress = () => {
+    navigation.navigate("UserListScreen");
+  };
+
   return (
     <SafeAreaView className="m-6 flex-1 justify-center">
       <View className="w-[100%] justify-center">
@@ -47,9 +57,9 @@ export default function HomeScreen() {
             className=" pt-2 gap-3"
           >
             {/* Other lists cards */}
-            <View>
+            <TouchableOpacity onPress={handleOtherListPress}>
               <UserListsCard />
-            </View>
+            </TouchableOpacity>
             <View>
               <UserListsCard />
             </View>
