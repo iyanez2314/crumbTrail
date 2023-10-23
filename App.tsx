@@ -7,6 +7,7 @@ import {
   HomeScreen,
   LoginScreen,
   SignupScreen,
+  UsersListScreen,
 } from "./screens/index";
 import UserListScreen from "./screens/UserListScreen";
 SplashScreen.preventAutoHideAsync();
@@ -21,6 +22,7 @@ export type RootStackParamList = {
   ResetPassword: undefined;
   Create: undefined;
   UserListScreen: undefined;
+  UsersListScreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -67,6 +69,13 @@ export default function App() {
         <Stack.Screen
           name="UserListScreen"
           component={UserListScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="UsersListScreen"
+          component={UsersListScreen}
           options={{
             headerShown: false,
           }}

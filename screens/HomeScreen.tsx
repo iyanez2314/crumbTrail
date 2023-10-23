@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 import React from "react";
 import {
@@ -25,14 +26,12 @@ export type HomeScreenNavigationProp = NativeStackNavigationProp<
 export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
-  const handleCreateList = () => {
-    navigation.navigate("Create");
-  };
-  const handleHome = () => {};
-  const handleDiscover = () => {};
-
   const handleUserListPress = () => {
     navigation.navigate("UserListScreen");
+  };
+
+  const handleUsersListPress = () => {
+    navigation.navigate("UsersListScreen");
   };
 
   return (
@@ -102,7 +101,9 @@ export default function HomeScreen() {
           >
             {/* Other user Cards Component */}
             <View>
-              <UsersListCards />
+              <Pressable onPress={handleUsersListPress}>
+                <UsersListCards />
+              </Pressable>
             </View>
             <View>
               <UsersListCards />
@@ -118,7 +119,7 @@ export default function HomeScreen() {
 
         {/* Navbar */}
         <View className="top-12 bottom-20 mt-auto mb-5">
-          <Navbar handleCreateList={handleCreateList} />
+          <Navbar />
         </View>
       </View>
     </SafeAreaView>

@@ -58,7 +58,7 @@ export default function ListHeader({ title }: ListDetailsHeaderProps) {
           style={{ flex: 1 }}
         >
           <View className="flex-1 justify-center items-center">
-            <View className="w-[400px] h-[475px] bg-white p-5 rounded-2xl items-center">
+            <View className="w-[400px] h-[500px] bg-white p-5 rounded-2xl items-center">
               <View className="flex flex-row items-center justify-between w-full">
                 <View>
                   <Text className="text-2xl font-bold">Edit List Details</Text>

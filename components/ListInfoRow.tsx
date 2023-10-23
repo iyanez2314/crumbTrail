@@ -10,7 +10,6 @@ export default function ListInfoRow() {
         <FontAwesome name="users" size={24} color="#F29FBC" />
         <Text className="text-[18px] font-bold text-sm">20 Followers</Text>
       </View>
-
       <ShareButton />
     </View>
   );
