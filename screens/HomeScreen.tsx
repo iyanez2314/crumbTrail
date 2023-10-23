@@ -31,7 +31,7 @@ export default function HomeScreen() {
   const handleHome = () => {};
   const handleDiscover = () => {};
 
-  const handleOtherListPress = () => {
+  const handleUserListPress = () => {
     navigation.navigate("UserListScreen");
   };
 
@@ -44,7 +44,9 @@ export default function HomeScreen() {
         <View className="p-3">
           <Text className="text-[18px] font-bold">Recently Created</Text>
           <View className="mt-2">
-            <RecentlyAddedCard />
+            <TouchableOpacity onPress={handleUserListPress}>
+              <RecentlyAddedCard />
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -57,7 +59,7 @@ export default function HomeScreen() {
             className=" pt-2 gap-3"
           >
             {/* Other lists cards */}
-            <TouchableOpacity onPress={handleOtherListPress}>
+            <TouchableOpacity onPress={handleUserListPress}>
               <UserListsCard />
             </TouchableOpacity>
             <View>

@@ -13,6 +13,7 @@ import ListInfoRow from "./ListInfoRow";
 import ListSearchRow from "./ListSearchRow";
 import ListRestaurantCount from "./ListRestaurantCount";
 import ListRestaurantCard from "./ListRestaurantCard";
+import ShareButton from "./ShareButton";
 
 export {
   Heading,
@@ -30,4 +31,5 @@ export {
   ListSearchRow,
   ListRestaurantCount,
   ListRestaurantCard,
+  ShareButton,
 };

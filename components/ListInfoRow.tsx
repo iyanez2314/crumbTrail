@@ -1,6 +1,7 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity, Share, Alert } from "react-native";
 import React from "react";
 import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
+import { ShareButton } from "../components/index";
 
 export default function ListInfoRow() {
   return (
@@ -10,9 +11,7 @@ export default function ListInfoRow() {
         <Text className="text-[18px] font-bold text-sm">20 Followers</Text>
       </View>
 
-      <View className="flex flex-row items-center space-x-2 w-[44px] h-[44px] justify-center ">
-        <FontAwesome name="share-square-o" size={30} color="#F29FBC" />
-      </View>
+      <ShareButton />
     </View>
   );
 }

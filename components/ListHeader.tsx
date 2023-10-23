@@ -58,10 +58,10 @@ export default function ListHeader({ title }: ListDetailsHeaderProps) {
           style={{ flex: 1 }}
         >
           <View className="flex-1 justify-center items-center">
-            <View className="w-[400px] h-[425px] bg-white p-5 rounded-2xl">
-              <View className="flex flex-row items-center justify-between">
+            <View className="w-[400px] h-[475px] bg-white p-5 rounded-2xl items-center">
+              <View className="flex flex-row items-center justify-between w-full">
                 <View>
-                  <Text className="text-xl font-bold">Edit List Details</Text>
+                  <Text className="text-2xl font-bold">Edit List Details</Text>
                 </View>
                 <Pressable
                   onPress={toggleModal}
@@ -70,28 +70,33 @@ export default function ListHeader({ title }: ListDetailsHeaderProps) {
                   <FontAwesome name="close" size={26} color="#F29FBC" />
                 </Pressable>
               </View>
-              <View className="space-y-4">
-                <View>
-                  <Text className="font-light text-xs">Title</Text>
+              <View className="space-y-4 items-center w-full ">
+                <View className="w-full">
+                  <Text className="font-light text-base">Title</Text>
                   <TextInput
                     placeholder="Best Tacos"
-                    className="p-2 w-[100%] border h-[50px] rounded font-bold"
+                    className="p-2 w-full border h-[50px] rounded font-bold"
                   />
                 </View>
-                <View>
-                  <Text className="font-light text-xs">City</Text>
+                <View className="w-full">
+                  <Text className="font-light text-base">City</Text>
                   <TextInput
                     placeholder="San Antonio, TX"
-                    className="p-2 w-[100%] border h-[50px] rounded"
+                    className="p-2 w-full border h-[50px] rounded"
                   />
                 </View>
-                <View>
-                  <Text className="font-light text-xs">City</Text>
+                <View className="w-full">
+                  <Text className="font-light text-base">Description</Text>
                   <TextInput
                     placeholder="Esse ad aliquip duis aliquip id cillum consectetur magna ut."
                     className="p-2 w-[100%] border h-[150px] rounded"
                   />
                 </View>
+              </View>
+              <View className="mt-4">
+                <TouchableOpacity className="bg-[#F29FBC] p-3 w-[300px] items-center rounded">
+                  <Text className="text-white font-bold text-xl">Update</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
