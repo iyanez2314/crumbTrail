@@ -18,7 +18,7 @@ export default function ListRestaurantCard({
         </View>
         <View>
           <Text className="text-[18px] font-bold">Torchy's Tacos</Text>
-          <Text className="text-[16px] font-light">324 IH-35, 78108, TX</Text>
+          <Text className="text-base font-light">324 IH-35, 78108, TX</Text>
         </View>
       </View>
       {/*  Left side content */}

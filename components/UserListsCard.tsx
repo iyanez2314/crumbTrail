@@ -9,7 +9,7 @@ export default function UserListsCard() {
       <View className=" flex flex-col justify-between h-full">
         <View className="w-full p-5 relative">
           <Text className="text-[18px] font-bold">Best Tacos</Text>
-          <Text className="text-[16px] font-light">San Antonio, TX</Text>
+          <Text className="text-base font-light">San Antonio, TX</Text>
           <View className="absolute w-1/2  items-end h-full top-24 left-20 justify-start">
             <ShareButton />
           </View>

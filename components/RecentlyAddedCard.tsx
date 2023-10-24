@@ -9,7 +9,7 @@ export default function RecentlyAddedCard() {
       <View className="p-4 flex flex-row justify-between">
         <View>
           <Text className="text-[18px] font-bold">Best Tacos</Text>
-          <Text className="text-[16px] font-light">San Antonio, TX</Text>
+          <Text className="text-base font-light">San Antonio, TX</Text>
         </View>
         <View>
           <ShareButton />

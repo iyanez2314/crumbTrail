@@ -41,7 +41,7 @@ export default function HomeScreen() {
         <HomeHeading />
         {/* Recently Created Section Component */}
         <View className="p-3">
-          <Text className="text-[18px] font-bold">Recently Created</Text>
+          <Text className="text-xl font-bold">Recently Created</Text>
           <View className="mt-2">
             <TouchableOpacity onPress={handleUserListPress}>
               <RecentlyAddedCard />
@@ -51,7 +51,7 @@ export default function HomeScreen() {
 
         {/* My Other lists Section Component */}
         <View className="p-3">
-          <Text className="text-xl font-bold">My Other Lists</Text>
+          <Text className="text-xl font-bold underline">My Lists</Text>
           <ScrollView
             showsHorizontalScrollIndicator={false}
             horizontal={true}
@@ -93,7 +93,7 @@ export default function HomeScreen() {
 
         {/* other popular lists Section Component */}
         <View className="p-3">
-          <Text className="text-xl font-bold">Other Popular Lists</Text>
+          <Text className="text-xl font-bold underline">Discover Lists</Text>
           <ScrollView
             className="pt-2 gap-3"
             horizontal={true}

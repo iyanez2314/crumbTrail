@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Pressable } from "react-native";
 import { FontAwesome } from "@expo/vector-icons/";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
@@ -13,17 +13,21 @@ export type HomeScreenNavigationProp = NativeStackNavigationProp<
 export default function Navbar() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
-  const handleCreateList = () => {
+  const handleCreateListPress = () => {
     navigation.navigate("Create");
   };
-  const handleHome = () => {};
-  const handleDiscover = () => {};
+  const handleHome = () => {
+    navigation.navigate("Home");
+  };
+  const handleDiscover = () => {
+    navigation.navigate("Discover");
+  };
 
   return (
     <View className="w-full flex justify-center items-center">
       <View className="bg-[#FFFFFF] shadow rounded-lg w-3/4 h-[60px] flex justify-center">
         <View className="flex flex-row gap-6 items-center justify-evenly">
-          <Pressable onPress={handleCreateList}>
+          <Pressable onPress={handleCreateListPress}>
             <View className="flex flex-col justify-center items-center">
               <FontAwesome name="plus" size={24} color="#F29FBC" />
               <Text className="font-bold">Create</Text>
@@ -33,9 +37,12 @@ export default function Navbar() {
             <FontAwesome name="home" size={24} color="#F29FBC" />
             <Text className="font-bold">Home</Text>
           </Pressable>
-          <Pressable className="flex flex-col items-center w-[44px] h-[44px] justify-center ">
+          <Pressable
+            onPress={handleDiscover}
+            className="flex flex-col items-center w-[65px] h-[55px] justify-center"
+          >
             <FontAwesome name="globe" size={24} color="#F29FBC" />
-            <Text className="font-bold text-xs">View</Text>
+            <Text className="font-bold">Discover</Text>
           </Pressable>
         </View>
       </View>

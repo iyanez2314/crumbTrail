@@ -23,12 +23,10 @@ export default function UsersListScreen() {
     <SafeAreaView className=" flex-1">
       <View className="w-[100%] justify-center items-center p-6 h-full">
         <ListHeader title="Best Tacos" isUsersList={false} />
-
         <ListDetails
           city="San Antonio, TX"
           description="Nisi ut nisi incididunt ad pariatur veniam aliqua enim dolore ex nulla excepteur."
         />
-
         <View className="flex flex-row w-4/5 justify-evenly items-center my-2">
           <View className="flex flex-row items-center">
             <Pressable className="w-[44px] h-[44px] flex flex-col items-center justify-center space-x-2">
@@ -52,11 +50,8 @@ export default function UsersListScreen() {
             </View>
           </View>
         </View>
-
         <ListSearchRow />
-
         <ListRestaurantCount />
-
         <ScrollView showsVerticalScrollIndicator={false} className="w-full">
           <View className=" flex flex-col w-full justify-center mt-3 space-y-6">
             <View>

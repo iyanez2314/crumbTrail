@@ -5,7 +5,7 @@ export default function HomeHeading() {
   return (
     <View className="flex flex-row justify-between items-center p-3">
       <View>
-        <Text className="text-xl font-bold">Welcome Back👋</Text>
+        <Text className="text-2xl font-bold">Welcome Back👋</Text>
         <Text className="text-base font-light">Hello, Isaac Yanez</Text>
       </View>
       <View>

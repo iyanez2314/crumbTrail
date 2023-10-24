@@ -41,7 +41,7 @@ export default function ListHeader({
   };
 
   return (
-    <View className="  justify-between p-5 w-full flex flex-row items-center">
+    <View className="justify-between p-5 w-full flex flex-row items-center">
       <Pressable
         onPress={handleBack}
         className="flex flex-row items-center space-x-2  w-[44px] h-[44px] justify-center"
@@ -49,7 +49,7 @@ export default function ListHeader({
         <FontAwesome name="arrow-left" size={26} color="#F29FBC" />
       </Pressable>
       <View className="">
-        <Text className="text-[14px] font-bold text-3xl">{title}</Text>
+        <Text className="font-bold text-2xl">{title}</Text>
       </View>
       {isUsersList ? (
         <Pressable

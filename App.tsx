@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   CreateListScreen,
   DecisionScreen,
+  Discover,
   HomeScreen,
   LoginScreen,
   SignupScreen,
@@ -23,6 +24,7 @@ export type RootStackParamList = {
   Create: undefined;
   UserListScreen: undefined;
   UsersListScreen: undefined;
+  Discover: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -76,6 +78,13 @@ export default function App() {
         <Stack.Screen
           name="UsersListScreen"
           component={UsersListScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Discover"
+          component={Discover}
           options={{
             headerShown: false,
           }}
