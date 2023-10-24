@@ -22,7 +22,7 @@ export default function UsersListScreen() {
   return (
     <SafeAreaView className=" flex-1">
       <View className="w-[100%] justify-center items-center p-6 h-full">
-        <ListHeader title="Best Tacos" />
+        <ListHeader title="Best Tacos" isUsersList={false} />
 
         <ListDetails
           city="San Antonio, TX"

@@ -13,9 +13,11 @@ import React, { useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 import { useNavigation } from "@react-navigation/native";
+import ShareButton from "./ShareButton";
 
 interface ListDetailsHeaderProps {
   title: string;
+  isUsersList?: boolean;
 }
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
@@ -23,7 +25,10 @@ export type HomeScreenNavigationProp = NativeStackNavigationProp<
   "UserListScreen"
 >;
 
-export default function ListHeader({ title }: ListDetailsHeaderProps) {
+export default function ListHeader({
+  title,
+  isUsersList,
+}: ListDetailsHeaderProps) {
   const navigation = useNavigation<HomeScreenNavigationProp>();
   const [visible, setVisible] = useState(false);
 
@@ -46,12 +51,17 @@ export default function ListHeader({ title }: ListDetailsHeaderProps) {
       <View className="">
         <Text className="text-[14px] font-bold text-3xl">{title}</Text>
       </View>
-      <Pressable
-        onPress={toggleModal}
-        className="flex flex-row items-center space-x-2 w-[44px] h-[44px] justify-center"
-      >
-        <FontAwesome name="edit" size={26} color="#F29FBC" />
-      </Pressable>
+      {isUsersList ? (
+        <Pressable
+          onPress={toggleModal}
+          className="flex flex-row items-center space-x-2 w-[44px] h-[44px] justify-center"
+        >
+          <FontAwesome name="edit" size={26} color="#F29FBC" />
+        </Pressable>
+      ) : (
+        <ShareButton />
+      )}
+
       <Modal animationType="slide" transparent={true} visible={visible}>
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}

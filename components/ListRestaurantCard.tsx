@@ -2,7 +2,13 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
 
-export default function ListRestaurantCard() {
+interface ListRestaurantCardProps {
+  usersList?: boolean;
+}
+
+export default function ListRestaurantCard({
+  usersList,
+}: ListRestaurantCardProps) {
   return (
     <View className="bg-[#FFFFFF] rounded-xl h-[75px] items-center justify-center flex flex-row shadow">
       {/* Right side content of card */}
@@ -17,7 +23,11 @@ export default function ListRestaurantCard() {
       </View>
       {/*  Left side content */}
       <View className="flex flex-row items-center space-x-2 w-[44px] h-[44px] justify-center">
-        <FontAwesome name="remove" size={26} color="#F29FBC" />
+        {usersList ? (
+          <FontAwesome name="remove" size={26} color="#F29FBC" />
+        ) : (
+          <FontAwesome name="plus" size={26} color="#F29FBC" />
+        )}
       </View>
     </View>
   );
