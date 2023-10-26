@@ -9,14 +9,13 @@ import {
 import React from "react";
 import {
   HomeHeading,
-  Navbar,
   RecentlyAddedCard,
   UserListsCard,
   UsersListCards,
 } from "../components";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { RootStackParamList } from "../src/navigation/AppNavigator";
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -36,7 +35,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView className="m-6 flex-1 justify-center">
-      <View className="w-[100%] justify-center">
+      <View className="w-full justify-center">
         {/* Home Heading Component */}
         <HomeHeading />
         {/* Recently Created Section Component */}
@@ -70,24 +69,6 @@ export default function HomeScreen() {
             <View>
               <UserListsCard />
             </View>
-
-            {/* <View className="bg-[#FFFFFF] shadow w-[150px] h-[150px] rounded-md">
-              <View className=" flex flex-col justify-between h-full">
-                <View className="w-full p-5 relative">
-                  <Text className="text-[18px] font-bold">Best Tacos</Text>
-                  <Text className="text-[16px] font-light">
-                    San Antonio, TX
-                  </Text>
-                  <View className="absolute w-1/2  items-end h-full top-24 left-20 justify-start">
-                    <Ionicons
-                      color={"#F29FBC"}
-                      name={"share-outline"}
-                      size={34}
-                    />
-                  </View>
-                </View>
-              </View>
-            </View> */}
           </ScrollView>
         </View>
 
@@ -117,10 +98,8 @@ export default function HomeScreen() {
           </ScrollView>
         </View>
 
-        {/* Navbar */}
-        <View className="top-12 bottom-20 mt-auto mb-5">
-          <Navbar />
-        </View>
+        {/* <View className="top-12 bottom-20 mt-auto mb-5">
+        </View> */}
       </View>
     </SafeAreaView>
   );

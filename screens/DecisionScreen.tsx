@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { RootStackParamList } from "../src/navigation/AppNavigator";
 
 export type DecisionScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -18,6 +18,10 @@ export default function DecisionScreen() {
 
   const handleLoginClick = () => {
     navigation.navigate("Login");
+  };
+
+  const handleGoToAppClick = () => {
+    navigation.navigate("Tabs");
   };
   return (
     <View className="flex-1 justify-center items-center bg-white">

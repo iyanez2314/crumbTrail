@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Share, Alert } from "react-native";
 import React from "react";
 import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
-import { ShareButton } from "../components/index";
+import ShareButton from "../components/ShareButton";
 
 export default function ListInfoRow() {
   return (

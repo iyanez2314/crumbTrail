@@ -5,7 +5,7 @@ import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
 export default function ListSearchRow() {
   return (
     <View className=" w-full p-2 flex-row items-center justify-center space-x-3">
-      <View className="flex-row items-center bg-white w-4/5 h-[50px] rounded-full relative p-3 shadow">
+      <View className="flex-row items-center bg-white w-4/5 h-[50px] rounded-xl relative p-3 shadow">
         <Ionicons
           name="search"
           size={24}

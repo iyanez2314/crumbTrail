@@ -11,7 +11,7 @@ import {
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { RootStackParamList } from "../src/navigation/AppNavigator";
 import { Heading, Navbar } from "../components";
 
 export type CreateListScreenNavigationProp = NativeStackNavigationProp<
@@ -73,9 +73,6 @@ export default function CreateListScreen() {
             </View>
           </View>
         </ScrollView>
-        <View className="mt-auto mb-5">
-          <Navbar />
-        </View>
       </SafeAreaView>
     </KeyboardAvoidingView>
   );

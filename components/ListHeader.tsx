@@ -11,7 +11,7 @@ import {
 import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { RootStackParamList } from "../src/navigation/AppNavigator";
 import { useNavigation } from "@react-navigation/native";
 import ShareButton from "./ShareButton";
 
@@ -37,7 +37,7 @@ export default function ListHeader({
   };
 
   const handleBack = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Tabs");
   };
 
   return (
