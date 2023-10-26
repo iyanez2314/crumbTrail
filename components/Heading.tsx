@@ -7,14 +7,10 @@ interface Props {
   title: string;
 }
 
-export default function Heading({ navigation, title }: Props) {
-  const goBack = () => {
-    navigation.goBack();
-  };
+export default function Heading({ title }: Props) {
   return (
-    <TouchableOpacity onPress={goBack}>
-      <View className="flex flex-row items-center gap-2">
-        <Ionicons name="arrow-back" size={24} />
+    <TouchableOpacity>
+      <View className="flex flex-row items-center gap-2 ml-1">
         <Text className="text-2xl font-bold">{title}</Text>
       </View>
     </TouchableOpacity>

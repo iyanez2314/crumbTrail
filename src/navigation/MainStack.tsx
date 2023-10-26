@@ -4,9 +4,15 @@ import HomeScreen from "../../screens/HomeScreen";
 import UserListScreen from "../../screens/UserListScreen";
 const HomeStack = createStackNavigator();
 
-export default function HomeStackNavigator() {
+export default function MainStack() {
   return (
-    <HomeStack.Navigator>
+    <HomeStack.Navigator
+      initialRouteName="HomeScreen"
+      screenOptions={{
+        headerShown: false,
+        gestureEnabled: false,
+      }}
+    >
       <HomeStack.Screen
         name="HomeScreen"
         component={HomeScreen}

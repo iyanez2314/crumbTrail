@@ -3,12 +3,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CreateListScreen from "../../screens/CreateListScreen";
 import DecisionScreen from "../../screens/DecisionScreen";
 import Discover from "../../screens/Discover";
-import HomeScreen from "../../screens/HomeScreen";
 import LoginScreen from "../../screens/LoginScreen";
 import SignupScreen from "../../screens/SignupScreen";
 import UsersListScreen from "../../screens/UsersListScreen";
 import UserListScreen from "../../screens/UserListScreen";
+import { useState } from "react";
 import Tabs from "./Tabs";
+import MainStack from "./MainStack";
+import AuthStack from "./AuthStack";
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 2000);
 
@@ -24,41 +26,71 @@ export type RootStackParamList = {
   UsersListScreen: undefined;
   Discover: undefined;
   Tabs: undefined;
+  main: undefined;
+  auth: undefined;
 };
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export default function AppNavigator() {
+  const [isSignedIn, setIsSignedIn] = useState(true);
+
   return (
-    <Stack.Navigator initialRouteName="Decision">
-      <Stack.Screen
-        name="Tabs"
-        component={Tabs}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="Decision"
-        component={DecisionScreen}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Login"
-        component={LoginScreen}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Signup"
-        component={SignupScreen}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen name="Create" component={CreateListScreen} />
-      <Stack.Screen name="Discover" component={Discover} />
-      <Stack.Screen name="UserListScreen" component={UserListScreen} />
-      <Stack.Screen name="UsersListScreen" component={UsersListScreen} />
-    </Stack.Navigator>
+    <RootStack.Navigator>
+      {isSignedIn ? (
+        <>
+          <RootStack.Screen
+            name="Tabs"
+            component={Tabs}
+            options={{ headerShown: false }}
+          />
+        </>
+      ) : (
+        <>
+          <RootStack.Screen
+            name="auth"
+            component={AuthStack}
+            options={{ headerShown: false }}
+          />
+        </>
+      )}
+    </RootStack.Navigator>
+
+    // <RootStack.Navigator
+    //   initialRouteName="Decision"
+    //   screenOptions={{
+    //     headerShown: false,
+    //     gestureEnabled: false,
+    //   }}
+    // >
+    //   <RootStack.Screen
+    //     name="Tabs"
+    //     component={Tabs}
+    //     options={{ headerShown: false }}
+    //   />
+    //   <RootStack.Screen
+    //     name="Decision"
+    //     component={DecisionScreen}
+    //     options={{
+    //       headerShown: false,
+    //     }}
+    //   />
+    //   <RootStack.Screen
+    //     name="Login"
+    //     component={LoginScreen}
+    //     options={{
+    //       headerShown: false,
+    //     }}
+    //   />
+    //   <RootStack.Screen
+    //     name="Signup"
+    //     component={SignupScreen}
+    //     options={{ headerShown: false }}
+    //   />
+    //   <RootStack.Screen name="Create" component={CreateListScreen} />
+    //   <RootStack.Screen name="Discover" component={Discover} />
+    //   <RootStack.Screen name="UserListScreen" component={UserListScreen} />
+    //   <RootStack.Screen name="UsersListScreen" component={UsersListScreen} />
+    // </RootStack.Navigator>
   );
 }

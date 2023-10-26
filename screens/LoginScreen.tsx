@@ -1,6 +1,5 @@
 import {
   View,
-  Text,
   KeyboardAvoidingView,
   Platform,
   SafeAreaView,
@@ -10,7 +9,7 @@ import React from "react";
 import { CreateAccountButtonSection, Heading, Logins } from "../components";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../src/navigation/AppNavigator";
-import { useNavigation } from "@react-navigation/native";
+import { CommonActions, useNavigation } from "@react-navigation/native";
 import LoginInputs from "../components/LoginInputs";
 
 export type LoginScreenNavigationProp = NativeStackNavigationProp<
@@ -31,7 +30,7 @@ export default function LoginScreen() {
 
   const handleLogin = () => {
     // Here we will need to do some logic to login the user
-    navigation.navigate("Tabs");
+    navigation.navigate("Home");
   };
 
   return (

@@ -37,7 +37,7 @@ export default function ListHeader({
   };
 
   const handleBack = () => {
-    navigation.navigate("Tabs");
+    navigation.goBack();
   };
 
   return (
