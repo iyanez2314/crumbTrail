@@ -13,7 +13,7 @@ export default function Heading({ navigation, title }: Props) {
   };
   return (
     <TouchableOpacity>
-      <View className="flex flex-row items-center gap-2 ml-1">
+      <View className="flex flex-row items-center gap-2 ">
         <Pressable
           onPress={goBack}
           className="w-[44px] h-[44px] items-center justify-center"

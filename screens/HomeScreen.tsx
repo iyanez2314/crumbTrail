@@ -25,12 +25,17 @@ export type HomeScreenNavigationProp = NativeStackNavigationProp<
 export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
+  // Might need to remove this later
   const handleUserListPress = () => {
     navigation.navigate("UserListScreen");
   };
 
   const handleUsersListPress = () => {
     navigation.navigate("UsersListScreen");
+  };
+
+  const handleMyListsPress = () => {
+    navigation.navigate("MyListsScreen");
   };
 
   return (
@@ -50,7 +55,9 @@ export default function HomeScreen() {
 
         {/* My Other lists Section Component */}
         <View className="p-3">
-          <Text className="text-xl font-bold underline">My Lists</Text>
+          <Pressable onPress={handleMyListsPress} className="">
+            <Text className="text-xl font-bold underline">My Lists</Text>
+          </Pressable>
           <ScrollView
             showsHorizontalScrollIndicator={false}
             horizontal={true}

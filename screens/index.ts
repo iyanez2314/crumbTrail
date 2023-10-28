@@ -5,6 +5,7 @@ import HomeScreen from "./HomeScreen";
 import CreateListScreen from "./CreateListScreen";
 import UsersListScreen from "./UsersListScreen";
 import Discover from "./Discover";
+import MyListsScreen from "./MyListsScreen";
 
 export {
   DecisionScreen,
@@ -14,4 +15,5 @@ export {
   CreateListScreen,
   UsersListScreen,
   Discover,
+  MyListsScreen,
 };

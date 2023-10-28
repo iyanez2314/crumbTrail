@@ -1,5 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import { UsersListScreen } from "../../screens";
+import { MyListsScreen, UsersListScreen } from "../../screens";
 import HomeScreen from "../../screens/HomeScreen";
 import UserListScreen from "../../screens/UserListScreen";
 const HomeStack = createStackNavigator();
@@ -26,6 +26,12 @@ export default function MainStack() {
       <HomeStack.Screen
         name="UsersListScreen"
         component={UsersListScreen}
+        options={{ headerShown: false }}
+      />
+
+      <HomeStack.Screen
+        name="MyListsScreen"
+        component={MyListsScreen}
         options={{ headerShown: false }}
       />
     </HomeStack.Navigator>

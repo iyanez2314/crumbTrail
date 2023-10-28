@@ -28,6 +28,7 @@ export type RootStackParamList = {
   Tabs: undefined;
   main: undefined;
   auth: undefined;
+  MyListsScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
