@@ -32,7 +32,7 @@ export default function CreateListScreen() {
           contentContainerStyle={{ flexGrow: 1 }}
         >
           <View className="mt-16 w-full">
-            <Heading navigation={navigation} title="Create List" />
+            <Heading location="Home" title="Create List" />
           </View>
           <View className="w-full justify-evenly items-center mt-6 ">
             {/* Create List Section */}

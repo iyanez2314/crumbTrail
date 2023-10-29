@@ -38,6 +38,10 @@ export default function HomeScreen() {
     navigation.navigate("MyListsScreen");
   };
 
+  const handleDiscoverListsPress = () => {
+    navigation.navigate("Discover");
+  };
+
   return (
     <SafeAreaView className="m-6 flex-1 justify-center">
       <View className="w-full justify-center">
@@ -81,7 +85,9 @@ export default function HomeScreen() {
 
         {/* other popular lists Section Component */}
         <View className="p-3">
-          <Text className="text-xl font-bold underline">Discover Lists</Text>
+          <Pressable onPress={handleDiscoverListsPress}>
+            <Text className="text-xl font-bold underline">Discover Lists</Text>
+          </Pressable>
           <ScrollView
             className="pt-2 gap-3"
             horizontal={true}

@@ -4,18 +4,21 @@ import { LoginScreenNavigationProp } from "../screens/LoginScreen";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../src/navigation/AppNavigator";
+
 interface Props {
-  navigation?: any;
   title: string;
-  location?: string;
+  location?: keyof RootStackParamList;
 }
 
-export default function Heading({ location, navigation, title }: Props) {
+export default function Heading({ location, title }: Props) {
   const nav = useNavigation<LoginScreenNavigationProp>();
 
   const goBack = () => {
-    console.log("go back");
-    nav.navigate("Home" || location);
+    if (location) {
+      nav.navigate(location);
+    } else {
+      nav.goBack();
+    }
   };
 
   return (
