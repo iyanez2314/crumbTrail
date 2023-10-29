@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { Heading, RecentlyAddedCard, UserListsCard } from "../components";
+import { Heading, RecentlyAddedCard } from "../components";
 
 export default function MyListsScreen() {
   return (
