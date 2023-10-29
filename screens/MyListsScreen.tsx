@@ -40,7 +40,7 @@ export default function MyListsScreen() {
             horizontal={false}
             className="h-full"
           >
-            <View className="space-y-2">
+            <View className="space-y-4">
               <TouchableOpacity>
                 <RecentlyAddedCard />
               </TouchableOpacity>

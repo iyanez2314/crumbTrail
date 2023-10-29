@@ -9,16 +9,15 @@ import {
 } from "react-native";
 import React from "react";
 import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
+import { Heading } from "../components";
 
 export default function Discover() {
   return (
     <SafeAreaView className="flex-1 m-6">
       <View className="w-[100%] justify-center items-center">
-        <View className="flex flex-col p-6 mt-6 w-full">
-          <View>
-            <Text className="text-3xl font-bold">Discovery</Text>
-          </View>
-          <View className="w-[80%]">
+        <View className="flex flex-col p-6 mt-6 w-full ">
+          <Heading title="Discover" location="Home" />
+          <View className="w-[80%]  ml-3">
             <Text>
               Are you here just to find a new place to eat? or maybe you are
               looking for other users lists? well you came to the right spot.
